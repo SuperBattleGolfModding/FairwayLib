@@ -10,7 +10,6 @@ public class Plugin : BaseUnityPlugin
 
     private void Awake()
     {
-        // Plugin startup logic
         Logger = base.Logger;
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
     }
