@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fairway", "src/Fairway.Core/Fairway.Core.csproj", "{8B247E02-96C4-4078-8826-53D271452F58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairwayLib", "src/FairwayLib.Core/FairwayLib.Core.csproj", "{8B247E02-96C4-4078-8826-53D271452F58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

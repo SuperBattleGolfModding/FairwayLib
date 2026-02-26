@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
-        <AssemblyName>Fairway.Core</AssemblyName>
-        <Product>Fairway Core Library</Product>
+        <AssemblyName>com.github.SuperBattleGolfModding.FairwayLib.Core</AssemblyName>
+        <Product>FairwayLib.Core</Product>
         <Version>1.0.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
@@ -12,7 +12,7 @@
             https://nuget.bepinex.dev/v3/index.json;
             https://nuget.samboy.dev/v3/index.json
         </RestoreAdditionalProjectSources>
-        <RootNamespace>Fairway.Core</RootNamespace>
+        <RootNamespace>FairwayLib.Core</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

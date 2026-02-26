@@ -1,7 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 
-namespace Fairway.Core;
+namespace FairwayLib.Core;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class Plugin : BaseUnityPlugin
