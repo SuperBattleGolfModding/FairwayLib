@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairwayLib", "src/FairwayLib.Core/FairwayLib.Core.csproj", "{8B247E02-96C4-4078-8826-53D271452F58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairwayLib.Core", "FairwayLib.Core\FairwayLib.Core.csproj", "{8B247E02-96C4-4078-8826-53D271452F58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairwayLib.Item", "FairwayLib.Item\FairwayLib.Item.csproj", "{24B12CBA-3513-4C1F-9A58-27225270B83D}"
 EndProject

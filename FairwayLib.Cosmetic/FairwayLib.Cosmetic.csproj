@@ -40,6 +40,10 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\src\FairwayLib.Core\FairwayLib.Core.csproj" />
+        <ProjectReference Include="..\FairwayLib.Core\FairwayLib.Core.csproj" />
     </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;$(FAIRWAY_UNITY_PROJECT_PATH)\Assets\Plugins\$(TargetFileName)&quot;" />
+    </Target>
 </Project>
