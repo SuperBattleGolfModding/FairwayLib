@@ -5,7 +5,7 @@ namespace FairwayLib.Item;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency(Core.MyPluginInfo.PLUGIN_GUID)]
-public class FairwayItemPlugin : BaseUnityPlugin
+public class ItemPlugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
 
