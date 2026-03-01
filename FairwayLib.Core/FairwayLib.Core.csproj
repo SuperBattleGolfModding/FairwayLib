@@ -5,7 +5,6 @@
         <AssemblyName>FairwayLib.Core</AssemblyName>
         <Product>Fairway Core</Product>
         <Version>0.0.1</Version>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <RestoreAdditionalProjectSources>
             https://api.nuget.org/v3/index.json;
@@ -13,7 +12,6 @@
             https://nuget.samboy.dev/v3/index.json
         </RestoreAdditionalProjectSources>
         <RootNamespace>FairwayLib.Core</RootNamespace>
-        <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
