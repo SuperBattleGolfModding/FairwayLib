@@ -21,8 +21,8 @@
     <Description></Description>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="$(SolutionRoot)README.md" Pack="true" PackagePath="/" />
-    <None Include="$(SolutionRoot)icon.png" Pack="true" PackagePath="/" />
+    <None Include="./Assets/README.md" Pack="true" PackagePath="/" />
+    <None Include="./Assets/icon.png" Pack="true" PackagePath="/" />
   </ItemGroup>
 
   <!-- Mod files to copy to the relative BepInEx directory after build -->

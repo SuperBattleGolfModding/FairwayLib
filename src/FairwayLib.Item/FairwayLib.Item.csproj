@@ -12,8 +12,8 @@
     <Description></Description>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="$(SolutionRoot)README.md" Pack="true" PackagePath="/" Link="Assets\README.md" />
-    <None Include="$(SolutionRoot)icon.png" Pack="true" PackagePath="/" Link="Assets\icon.png" />
+    <None Include="./Assets/README.md" Pack="true" PackagePath="/" />
+    <None Include="./Assets/icon.png" Pack="true" PackagePath="/" />
   </ItemGroup>
 
   <ItemGroup>

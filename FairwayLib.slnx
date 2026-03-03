@@ -1,5 +1,9 @@
 <Solution>
   <Project Path="src/FairwayLib.Core/FairwayLib.Core.csproj" />
-  <Project Path="src/FairwayLib.Cosmetic/FairwayLib.Cosmetic.csproj" />
-  <Project Path="src/FairwayLib.Item/FairwayLib.Item.csproj" />
+  <Project Path="src/FairwayLib.Cosmetic/FairwayLib.Cosmetic.csproj">
+    <BuildDependency Project="src/FairwayLib.Core/FairwayLib.Core.csproj" />
+  </Project>
+  <Project Path="src/FairwayLib.Item/FairwayLib.Item.csproj">
+    <BuildDependency Project="src/FairwayLib.Core/FairwayLib.Core.csproj" />
+  </Project>
 </Solution>

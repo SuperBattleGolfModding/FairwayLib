@@ -56,7 +56,8 @@
       Publicize these assemblies so we can access their internal members.
       Learn more at: https://github.com/BepInEx/BepInEx.AssemblyPublicizer
     -->
-    <Reference Include="$(ManagedDir)Assembly-CSharp.dll" Private="false" Publicize="true" />
+    <Reference Include="$(ManagedDir)GameAssembly.dll" Private="false" Publicize="true" />
+	<Reference Include="$(ManagedDir)SharedAssembly.dll" Private="false" Publicize="true" />
   </ItemGroup>
 
   <!-- Copy mod files defined in projects to the target BepInEx directory -->
