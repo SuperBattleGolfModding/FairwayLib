@@ -51,14 +51,14 @@ public class Util
     /// <param name="resourceName">The name of the assetbundle file you want to load.</param>
     /// <returns></returns>
     [CanBeNull]
-    public static AssetBundle LoadEmbeddedAssetBundle(Assembly assembly, string resourceName)
+    public static AssetBundle? LoadEmbeddedAssetBundle(Assembly assembly, string resourceName)
     {
         var dataResourceName = assembly.GetManifestResourceNames()
             .FirstOrDefault(name => name.EndsWith(resourceName));
 
         if (dataResourceName == null)
         {
-            CorePlugin.Logger.LogError($"Embedded resource {resourceName} not found in assembly {assembly.FullName}");
+            CorePlugin.Log.LogError($"Embedded resource {resourceName} not found in assembly {assembly.FullName}");
             return null;
         }
 
@@ -73,11 +73,11 @@ public class Util
 
         if (assets == null)
         {
-            CorePlugin.Logger.LogError("Failed to load asset bundle from " + dataResourceName);
+            CorePlugin.Log.LogError("Failed to load asset bundle from " + dataResourceName);
             return null;
         }
 
-        CorePlugin.Logger.LogInfo($"AssetBundle {resourceName} loaded successfully.");
+        CorePlugin.Log.LogInfo($"AssetBundle {resourceName} loaded successfully.");
         return assets;
     }
 }

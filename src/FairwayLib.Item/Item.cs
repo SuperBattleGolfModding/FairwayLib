@@ -21,7 +21,7 @@ public class GameManager_Patch
             
             if (collection.items == null)
             {
-                ItemPlugin.Logger.LogError("modCollection.items is NULL!");
+                ItemPlugin.Log.LogError("modCollection.items is NULL!");
                 return;
             }
             var gameItemData = GameManager.instance.allItems.allItemData;
@@ -35,18 +35,18 @@ public class GameManager_Patch
                 item.Initialize();
                 if (gameItemData.TryAdd(newItemType, item))
                 {
-                    ItemPlugin.Logger.LogInfo($"Added modded item {itemPrefabName} with id {newItemType}");
+                    ItemPlugin.Log.LogInfo($"Added modded item {itemPrefabName} with id {newItemType}");
                     itemIndex++;
                 }
                 else
                 {
-                    ItemPlugin.Logger.LogError($"Failed to add item {itemPrefabName} with id {newItemType}");
+                    ItemPlugin.Log.LogError($"Failed to add item {itemPrefabName} with id {newItemType}");
                 }
             }
         }
         catch (System.Exception e)
         {
-            ItemPlugin.Logger.LogError($"CRASH en el loop: {e}");
+            ItemPlugin.Log.LogError($"CRASH en el loop: {e}");
         }
     }
 }

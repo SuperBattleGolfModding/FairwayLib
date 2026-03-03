@@ -16,18 +16,18 @@ public class CourseManager_Patch
         {
             if (EquipmentManager.instance?.equipmentCollection?.equipmentDictionary == null)
             {
-                ItemPlugin.Logger.LogError("EquipmentManager dictionary is not ready yet!");
+                ItemPlugin.Log.LogError("EquipmentManager dictionary is not ready yet!");
                 return;
             }
             
             if (collection.equipment == null)
             {
-                ItemPlugin.Logger.LogError("equipmentCollection.items is NULL!");
+                ItemPlugin.Log.LogError("equipmentCollection.items is NULL!");
                 return;
             }
 
             var gameEquipmentData = EquipmentManager.instance.equipmentCollection.equipmentDictionary;
-            ItemPlugin.Logger.LogInfo($"Starting loop for {collection.equipment.Length} items...");
+            ItemPlugin.Log.LogInfo($"Starting loop for {collection.equipment.Length} items...");
             var equipmentIndex = 0;
             foreach (var equipment in collection.equipment)
             {
@@ -37,18 +37,18 @@ public class CourseManager_Patch
                 var equipmentPrefabName = equipment.Prefab.name;
                 if (gameEquipmentData.TryAdd(newEquipmentType, equipment))
                 {
-                    ItemPlugin.Logger.LogInfo($"Added modded equipment {equipmentPrefabName} with id {newEquipmentType}");
+                    ItemPlugin.Log.LogInfo($"Added modded equipment {equipmentPrefabName} with id {newEquipmentType}");
                     equipmentIndex++;
                 }
                 else
                 {
-                    ItemPlugin.Logger.LogError($"Failed to add equipment {equipmentPrefabName} with id {newEquipmentType}");
+                    ItemPlugin.Log.LogError($"Failed to add equipment {equipmentPrefabName} with id {newEquipmentType}");
                 }
             }
         }
         catch (System.Exception e)
         {
-            ItemPlugin.Logger.LogError($"CRASH en el loop: {e}");
+            ItemPlugin.Log.LogError($"CRASH en el loop: {e}");
         }
     }
 }
@@ -65,7 +65,7 @@ public class PlayerInventory_UpdateEquipmentSwitchers
         if ((int)itemId >= 1000)
         {
             __instance.PlayerInfo.RightHandEquipmentSwitcher.SetEquipment(__instance.thrownItem.HasFlag(PlayerInventory.ThrownItemHand.Right) ? EquipmentType.None : itemId);   
-            ItemPlugin.Logger.LogError($"Attempted to update to mod equipment id {((int)itemId).ToString()}");
+            ItemPlugin.Log.LogError($"Attempted to update to mod equipment id {((int)itemId).ToString()}");
         }
     }
 }

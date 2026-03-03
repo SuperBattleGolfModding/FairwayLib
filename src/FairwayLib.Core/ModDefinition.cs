@@ -117,7 +117,7 @@ public class ModDefinition : IModDefinitionResolvable
             }
             catch (Exception ex)
             {
-                CorePlugin.Logger.LogError(ex);
+                CorePlugin.Log.LogError(ex);
             }
         }
     }
