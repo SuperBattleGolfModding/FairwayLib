@@ -1,15 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>com.github.SuperBattleGolfModding.FairwayLib.Core</AssemblyName>
-    <AssemblyTitle>FairwayLib.Core</AssemblyTitle>
+    <AssemblyName>com.github.SuperBattleGolfModding.FairwayLib.Item</AssemblyName>
+    <AssemblyTitle>FairwayLib.Item</AssemblyTitle>
     <Version>0.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup>
     <IsPackable>true</IsPackable>
-    <PackageId></PackageId>
-    <Description></Description>
+    <PackageId>SuperBattleGolfModding.FairwayLib.Item</PackageId>
+    <Description>Modding Library for Super Battle Golf</Description>
+	<Authors>FairwayLib Contributors</Authors> <!-- TODO: list proper names -->
   </PropertyGroup>
   <ItemGroup>
     <None Include="./Assets/README.md" Pack="true" PackagePath="/" />

@@ -1,13 +1,23 @@
-﻿using HarmonyLib;
+﻿using MonoDetour;
+using MonoDetour.HookGen;
 
-namespace FairwayLib.Item;
+namespace FairwayLib.Item.Hooks;
 
-[HarmonyPatch(typeof(CourseManager), "Awake")]
-public class CourseManager_Patch
+[MonoDetourTargets(typeof(CourseManager))]
+public class CourseManagerHooks
 {
-    [HarmonyPostfix]
-    static void Postfix(EquipmentCollection __instance)
+    [MonoDetourHookInitialize]
+    static void Init()
     {
+        Md.CourseManager.Awake.Postfix(Postfix_Awake);
+    }
+
+    static void Postfix_Awake(CourseManager self)
+    {
+        /*
+         * TODO:
+         * Mods' modded equipments are supposed to be injected here
+         */
     }
 
     private static void _injectModdedEquipments(int modIndex, EquipmentCollection collection)
@@ -49,23 +59,6 @@ public class CourseManager_Patch
         catch (System.Exception e)
         {
             ItemPlugin.Log.LogError($"CRASH en el loop: {e}");
-        }
-    }
-}
-
-
-
-[HarmonyPatch(typeof(PlayerInventory), "UpdateEquipmentSwitchers")]
-public class PlayerInventory_UpdateEquipmentSwitchers
-{
-    [HarmonyPostfix]
-    public static void Postfix(PlayerInventory __instance)
-    {
-        var itemId = (EquipmentType)__instance.GetEffectivelyEquippedItem();
-        if ((int)itemId >= 1000)
-        {
-            __instance.PlayerInfo.RightHandEquipmentSwitcher.SetEquipment(__instance.thrownItem.HasFlag(PlayerInventory.ThrownItemHand.Right) ? EquipmentType.None : itemId);   
-            ItemPlugin.Log.LogError($"Attempted to update to mod equipment id {((int)itemId).ToString()}");
         }
     }
 }

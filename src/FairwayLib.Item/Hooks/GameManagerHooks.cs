@@ -1,16 +1,25 @@
-﻿using HarmonyLib;
+﻿using MonoDetour;
+using MonoDetour.HookGen;
 
-namespace FairwayLib.Item;
+namespace FairwayLib.Item.Hooks;
 
-[HarmonyPatch(typeof(GameManager), "Awake")]
-public class GameManager_Patch
+[MonoDetourTargets(typeof(GameManager))]
+public class GameManagerHooks
 {
-    [HarmonyPostfix]
-    public static void Postfix(GameManager __instance)
+    [MonoDetourHookInitialize]
+    static void Init()
     {
+        Md.GameManager.Awake.Postfix(Postfix_Awake);
     }
-    
-    private static void _injectModdedItems(int modIndex, ItemCollection collection)
+
+    static void Postfix_Awake(GameManager self)
+    {
+        /* TODO:
+         * Modded items should be injected here
+         */
+    }
+
+     static void _injectModdedItems(int modIndex, ItemCollection collection)
     {
         try
         {

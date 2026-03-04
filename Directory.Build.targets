@@ -33,6 +33,9 @@
     <PackageReference Include="BepInEx.Core" Version="5.4.21" />
     <!-- In reality BepInEx 5.4.21 ships HarmonyX 2.9 but BepInEx.Core gives us 2.7 -->
     <PackageReference Include="HarmonyX" Version="2.9.0" />
+	<!-- MonoDetour -->
+	<PackageReference Include="MonoDetour.HookGen" Version="0.7.*" PrivateAssets="all" />
+	<PackageReference Include="MonoDetour" Version="[*,2.0)" />
   </ItemGroup>
 
   <!-- NuGet fallback stripped game references -->

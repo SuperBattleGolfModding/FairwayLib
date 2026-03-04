@@ -17,8 +17,9 @@
       TODO: Fill these values. See:
       https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices
     -->
-    <PackageId></PackageId>
-    <Description></Description>
+    <PackageId>SuperBattleGolfModding.FairwayLib.Core</PackageId>
+    <Description>Modding Library for Super Battle Golf</Description>
+	<Authors>FairwayLib Contributors</Authors> <!-- TODO: list proper names -->
   </PropertyGroup>
   <ItemGroup>
     <None Include="./Assets/README.md" Pack="true" PackagePath="/" />
