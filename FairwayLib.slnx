@@ -6,4 +6,7 @@
   <Project Path="src/FairwayLib.Item/FairwayLib.Item.csproj">
     <BuildDependency Project="src/FairwayLib.Core/FairwayLib.Core.csproj" />
   </Project>
+  <Project Path="src/FairwayLib.Course/FairwayLib.Course.csproj">
+    <BuildDependency Project="src/FairwayLib.Core/FairwayLib.Core.csproj" />
+  </Project>
 </Solution>

@@ -17,6 +17,9 @@ public class GameManagerHooks
         /* TODO:
          * Modded items should be injected here
          */
+
+        ItemCollection testCollection = ItemPlugin.itemBundle.LoadAsset<ItemCollection>("ItemCollection");
+        _injectModdedItems(1, testCollection);
     }
 
      static void _injectModdedItems(int modIndex, ItemCollection collection)

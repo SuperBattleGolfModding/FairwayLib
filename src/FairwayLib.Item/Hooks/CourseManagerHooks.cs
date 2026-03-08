@@ -1,4 +1,5 @@
-﻿using MonoDetour;
+﻿using BepInEx;
+using MonoDetour;
 using MonoDetour.HookGen;
 
 namespace FairwayLib.Item.Hooks;
@@ -18,6 +19,9 @@ public class CourseManagerHooks
          * TODO:
          * Mods' modded equipments are supposed to be injected here
          */
+
+        EquipmentCollection testCollection = ItemPlugin.itemBundle.LoadAsset<EquipmentCollection>("EquipmentCollection");
+        _injectModdedEquipments(1, testCollection);
     }
 
     private static void _injectModdedEquipments(int modIndex, EquipmentCollection collection)

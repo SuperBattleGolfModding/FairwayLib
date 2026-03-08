@@ -61,6 +61,7 @@
     -->
     <Reference Include="$(ManagedDir)GameAssembly.dll" Private="false" Publicize="true" />
 	<Reference Include="$(ManagedDir)SharedAssembly.dll" Private="false" Publicize="true" />
+	<Reference Include="$(ManagedDir)Eflatun.SceneReference.dll" Private="false" Publicize="true" />
   </ItemGroup>
 
   <!-- Copy mod files defined in projects to the target BepInEx directory -->
